@@ -72,6 +72,7 @@ namespace AAChallenge
                         Console.WriteLine(item.algorithm);
                         AAResponse asdf = await response.Content.ReadAsAsync<AAResponse>();
                         Console.WriteLine(asdf.status);
+                        Console.WriteLine(asdf.message);
                     }
                 }
             }
