@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AAItem.cs" />
+    <Compile Include="AAResponse.cs" />
+    <Compile Include="AATestItem.cs" />
     <Compile Include="Algorithms.cs" />
     <Compile Include="Calculation.cs" />
     <Compile Include="Program.cs" />

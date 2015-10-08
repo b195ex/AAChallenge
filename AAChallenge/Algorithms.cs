@@ -65,18 +65,22 @@ namespace AAChallenge
                 {
                     foreach (var def in dict)
                     {
-                        if (temp.ToLower().Contains(def))
+                        if (temp.ToLower().StartsWith(def))
                         {
                             flag = false;
                             rep.Add(temp.Substring(0, def.Length));
-                            temp.Remove(0, def.Length);
+                            temp=temp.Remove(0, def.Length);
                             break;
                         }
                     }
                     if (flag) break;
                 }
-                ItemsList.RemoveAt(i);
-                ItemsList.InsertRange(i, rep);
+                if (rep.Count > 0)
+                {
+                    ItemsList.RemoveAt(i);
+                    ItemsList.InsertRange(i, rep);
+                    rep.Clear();
+                }
             }
             item.words = ItemsList.ToArray();
         }
@@ -102,7 +106,7 @@ namespace AAChallenge
         }
         public static void Fib(AAItem item)
         {
-            int a, b = 1, c;
+            long a, b = 1, c;
             a = c = 0;
             while (c <= item.startingFibonacciNumber)
             {
