@@ -13,7 +13,7 @@ namespace AAChallenge
             emailAddress = "b195ex@gmail.com";
             name = "Erick J. Viera";
             repoUrl = "https://github.com/b195ex/AAChallenge.git";
-            webhookUrl = "http://www.rosalilastudio.com/";
+            webhookUrl = "http://200.59.27.28/aac/api/values";
         }
         public string encodedValue { get; set; }
         public string emailAddress { get; set; }
